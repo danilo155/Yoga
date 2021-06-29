@@ -47,10 +47,14 @@ header .menu a {
 
 header .menu a::after {
   content: "";
-  display: none;
-  width: 0px;
-  height: 1px;
-  background: #5363db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0%;
+  height: 3px;
+  left: 50%;
+  bottom: -10px;
+  background: #f38181;
   -webkit-transform: translate(50%);
           transform: translate(50%);
   position: absolute;
@@ -59,12 +63,7 @@ header .menu a::after {
 }
 
 header .menu a:hover::after {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  width: 30px;
+  width: 100%;
 }
 
 section {

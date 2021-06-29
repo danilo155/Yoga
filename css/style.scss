@@ -31,18 +31,18 @@ header {
     }
     a::after {
       content: "";
-      display: none;
-      width: 0px;
-      height: 1px;
-      background: $liBefore;
+      display: flex;
+      width: 0%;
+      height: 3px;
+      left: 50%;
+      bottom: -10px;
+      background: #f38181;
       transform: translate(50%);
       position: absolute;
       transition: 0.5s;
     }
     a:hover::after {
-      display: flex;
-      transition: 0.5s;
-      width: 30px;
+      width: 100%;
     }
   }
 }
