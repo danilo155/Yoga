@@ -108,10 +108,23 @@ section ul li img {
 .forma form {
   background: #fff;
   width: 300px;
-  border-radius: 4px;
+  border-radius: 20px;
   padding-left: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.forma form select {
+  margin-top: 18px;
+  border-radius: 5px;
+}
+
+.forma form input[type="tel"] {
+  margin-top: 18px;
+}
+
+.forma form input[type="text"] {
+  margin-top: 30px;
 }
 
 .forma form a {
@@ -130,9 +143,11 @@ section ul li img {
   display: flex;
   border-radius: 4px;
   margin-left: 100px;
+  margin-top: 34px;
 }
 
 .forma h2 {
   color: #5363db;
+  margin-top: 42px;
 }
 /*# sourceMappingURL=style.css.map */
