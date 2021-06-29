@@ -51,24 +51,28 @@ header .menu a {
 }
 
 header .menu a::after {
-  content: "";
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 0%;
+  content: "";
   height: 3px;
+  width: 0%;
   left: 50%;
   bottom: -10px;
-  background: #f38181;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
-  position: absolute;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #f38181;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
 }
 
 header .menu a:hover::after {
   width: 100%;
+}
+
+header .menu a:hover {
+  color: #f38181;
 }
 
 section {
