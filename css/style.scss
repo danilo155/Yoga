@@ -6,6 +6,10 @@ $liBefore: #5363db;
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url(/fonts/DejaVuSans.ttf);
+}
 header {
   width: 1200px;
   max-width: 100%;
@@ -105,5 +109,20 @@ section {
   h2 {
     color: $menuColor;
     margin-top: 42px;
+  }
+}
+.text {
+  margin-left: 91px;
+  h2 {
+    color: $lightColor;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    font-family: "DejaVu Sans";
+    font-style: italic;
+    margin-top: 51px;
   }
 }

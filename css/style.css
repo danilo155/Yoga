@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "DejaVu Sans";
+  src: url(/fonts/DejaVuSans.ttf);
+}
+
 header {
   width: 1200px;
   max-width: 100%;
@@ -148,5 +153,23 @@ section ul li img {
 .forma h2 {
   color: #5363db;
   margin-top: 42px;
+}
+
+.text {
+  margin-left: 91px;
+}
+
+.text h2 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "DejaVu Sans";
+  font-style: italic;
+  margin-top: 51px;
 }
 /*# sourceMappingURL=style.css.map */
