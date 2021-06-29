@@ -69,8 +69,27 @@ section {
 }
 .forma {
   background-image: url(/img/bg-01.jpg);
+  display: flex;
+  justify-content: center;
   form {
     background: #fff;
+    width: 300px;
+    border-radius: 4px;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: $lightColor;
+    }
+    .Try_it {
+      background: $liBefore;
+      width: 100px;
+      justify-content: center;
+      display: flex;
+      border-radius: 4px;
+      margin-left: 100px;
+    }
   }
   h2 {
     color: $menuColor;
