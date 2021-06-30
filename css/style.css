@@ -48,31 +48,32 @@ header .menu li {
 header .menu a {
   color: #5363db;
   text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
 }
 
 header .menu a::after {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   content: "";
-  height: 3px;
-  width: 0%;
+  display: block;
+  position: absolute;
   left: 50%;
-  bottom: -10px;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  background-color: #f38181;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
-header .menu a:hover::after {
-  width: 100%;
+  width: 0;
+  height: 3px;
+  background: #f38181;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 header .menu a:hover {
   color: #f38181;
+}
+
+header .menu a:hover::after {
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 section {

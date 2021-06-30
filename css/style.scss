@@ -32,24 +32,27 @@ header {
     a {
       color: $menuColor;
       text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+      position: relative;
     }
+
     a::after {
-      position: absolute;
-      display: flex;
       content: "";
-      height: 3px;
-      width: 0%;
+      display: block;
+      position: absolute;
       left: 50%;
-      bottom: -10px;
-      transform: translate(-50%);
-      background-color: #f38181;
-      transition: width 0.5s;
-    }
-    a:hover::after {
-      width: 100%;
+      width: 0;
+      height: 3px;
+      background: #f38181;
+      transition: 0.5s;
     }
     a:hover {
       color: #f38181;
+    }
+    a:hover::after {
+      width: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
