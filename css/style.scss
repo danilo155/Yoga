@@ -6,6 +6,9 @@ $liBefore: #5363db;
   padding: 0;
   box-sizing: border-box;
 }
+.wrapper {
+  width: 100%;
+}
 @font-face {
   font-family: "DejaVu Sans";
   src: url(/fonts/DejaVuSans.ttf);
@@ -55,6 +58,9 @@ header {
       transform: translate(-50%, -50%);
     }
   }
+}
+main {
+  width: 100%;
 }
 section {
   width: 100%;
@@ -131,4 +137,31 @@ section {
     font-style: italic;
     margin-top: 51px;
   }
+}
+.information {
+  background: $lightColor;
+  text-align: center;
+  width: 1170px;
+  margin: 0 auto;
+  max-width: 100%;
+  .information_of_class {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  h2 {
+    color: $liBefore;
+    text-transform: uppercase;
+  }
+  p {
+    font-family: "DejaVu Sans";
+    font-style: italic;
+    color: #777;
+  }
+}
+.yoga_class {
+  display: flex;
+  box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.5);
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
