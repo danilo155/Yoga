@@ -64,7 +64,6 @@ main {
 }
 section {
   width: 100%;
-  background: $menuColor;
   padding: 125px 0 130px;
   color: $lightColor;
   ul {
@@ -138,6 +137,9 @@ section {
     margin-top: 51px;
   }
 }
+.yoga_class .img {
+  width: 100%;
+}
 .information {
   background: $lightColor;
   text-align: center;
@@ -164,4 +166,28 @@ section {
   box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.5);
   margin-bottom: 20px;
   border-radius: 10px;
+}
+@media (max-width: 964px) {
+  nav {
+    display: none;
+  }
+}
+@media (max-width: 759px) {
+  .forma {
+    display: block;
+    justify-content: center;
+  }
+  .Description_of_services {
+    display: block;
+    background: $liBefore;
+  }
+  .yoga_class {
+    display: block;
+  }
+  .yoga_class .img {
+    display: block;
+  }
+  .information_of_class {
+    display: block;
+  }
 }
