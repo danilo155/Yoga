@@ -167,6 +167,9 @@ section {
   margin-bottom: 20px;
   border-radius: 10px;
 }
+.Description_of_services {
+  background: $liBefore;
+}
 @media (max-width: 964px) {
   nav {
     display: none;
@@ -189,5 +192,18 @@ section {
   }
   .information_of_class {
     display: block;
+  }
+  .forma {
+    form {
+      margin-left: 200px;
+      margin-top: -110px;
+    }
+    h2 {
+      margin-top: 10px;
+    }
+    .text {
+      margin-top: 10px;
+      margin-left: 200px;
+    }
   }
 }

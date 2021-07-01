@@ -229,6 +229,10 @@ section ul li img {
   border-radius: 10px;
 }
 
+.Description_of_services {
+  background: #5363db;
+}
+
 @media (max-width: 964px) {
   nav {
     display: none;
@@ -254,6 +258,17 @@ section ul li img {
   }
   .information_of_class {
     display: block;
+  }
+  .forma form {
+    margin-left: 200px;
+    margin-top: -110px;
+  }
+  .forma h2 {
+    margin-top: 10px;
+  }
+  .forma .text {
+    margin-top: 10px;
+    margin-left: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
