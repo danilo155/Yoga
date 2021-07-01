@@ -83,7 +83,7 @@ section {
   }
 }
 .forma {
-  background-image: url(/img/bg-01.jpg);
+  background-image: url(../img/bg-01.jpg);
   display: flex;
   justify-content: center;
   form {
@@ -175,6 +175,7 @@ section {
     display: none;
   }
 }
+
 @media (max-width: 759px) {
   .forma {
     display: block;
@@ -205,5 +206,10 @@ section {
       margin-top: 10px;
       margin-left: 200px;
     }
+  }
+}
+@media (max-width: 320px) {
+  form {
+    margin: 0;
   }
 }
