@@ -239,6 +239,11 @@ section ul li img {
   }
 }
 
+.Description_of_services {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media (max-width: 759px) {
   .forma {
     display: block;
@@ -246,35 +251,80 @@ section ul li img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.yoga_class {
+  display: block;
+}
+
+.yoga_class .img {
+  display: block;
+}
+
+.information_of_class {
+  display: block;
+}
+
+.forma form {
+  margin-left: 200px;
+  margin-top: -110px;
+}
+
+.forma h2 {
+  margin-top: 10px;
+}
+
+.forma .text {
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+@media (max-width: 714px) {
   .Description_of_services {
     display: block;
     background: #5363db;
   }
-  .yoga_class {
+  .Description_of_services ul {
     display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .yoga_class .img {
-    display: block;
+  .Description_of_services ul li {
+    width: 100%;
+    margin-left: 10px;
   }
-  .information_of_class {
-    display: block;
+  .information {
+    margin-left: 10px;
   }
   .forma form {
-    margin-left: 200px;
-    margin-top: -110px;
-  }
-  .forma h2 {
-    margin-top: 10px;
+    margin-left: 10px;
+    margin-top: -40px;
   }
   .forma .text {
-    margin-top: 10px;
-    margin-left: 200px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  .forma p {
+    margin-top: -10px;
+    margin-left: 10px;
   }
 }
 
 @media (max-width: 320px) {
-  form {
-    margin: 0;
+  .Description_of_services {
+    display: block;
+    background: #5363db;
+  }
+  .Description_of_services ul {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Description_of_services ul li {
+    width: 100%;
+    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
