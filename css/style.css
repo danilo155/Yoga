@@ -254,7 +254,9 @@ section ul li img {
 }
 
 .yoga_class {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .yoga_class .img {
