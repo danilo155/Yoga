@@ -210,14 +210,15 @@ section {
     padding-top: 20px;
   }
 }
-@media (max-width: 665px) {
-  .forma {
-    display: flex;
-  }
-}
+
 @media (max-width: 561px) {
   .forma {
     display: block;
+    width: 100%;
+  }
+  form {
+    margin: 0 auto;
+    margin-left: 0;
   }
 }
 @media (max-width: 964px) {
@@ -315,6 +316,23 @@ section {
       h2 {
         margin-left: 2px;
       }
+    }
+  }
+}
+@media (max-width: 665px) {
+  .forma {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 492px) {
+  .forma {
+    display: block;
+    form {
+      margin-left: 50px;
+      margin-bottom: 20px;
     }
   }
 }
