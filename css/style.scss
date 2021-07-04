@@ -211,6 +211,8 @@ section {
   }
   nav {
     position: absolute;
+    top: 100px;
+    text-align: center;
   }
   input[type="checkbox"]:checked ~ nav {
     display: block;
