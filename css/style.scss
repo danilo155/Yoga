@@ -13,6 +13,12 @@ $liBefore: #5363db;
   font-family: "DejaVu Sans";
   src: url(/fonts/DejaVuSans.ttf);
 }
+label[for="toggle"] {
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
 header {
   width: 1200px;
   max-width: 100%;
@@ -21,6 +27,34 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  label {
+    span {
+      display: block;
+      height: 3px;
+      width: 25px;
+      background: #333;
+      position: relative;
+    }
+    span::before {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 25px;
+      background: #333;
+      position: absolute;
+      top: 10px;
+    }
+    span::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 25px;
+      background: #333;
+      position: absolute;
+      top: -10px;
+    }
+  }
   img {
     display: block;
   }
@@ -143,7 +177,7 @@ section {
 .information {
   background: $lightColor;
   text-align: center;
-  width: 1170px;
+  width: 100%;
   margin: 0 auto;
   max-width: 100%;
   .information_of_class {
@@ -169,8 +203,28 @@ section {
 }
 .Description_of_services {
   background: $liBefore;
+  width: 100%;
 }
 @media (max-width: 964px) {
+  label[for="toggle"] {
+    display: block;
+  }
+  nav {
+    position: absolute;
+  }
+  input[type="checkbox"]:checked ~ nav {
+    display: block;
+    width: 100%;
+  }
+  header ul {
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+  }
+  span {
+    right: 10px;
+  }
   nav {
     display: none;
   }
@@ -184,11 +238,35 @@ section {
     justify-content: center;
   }
 }
+
 .yoga_class {
+  .text {
+    width: 301px;
+  }
   display: flex;
+  h2 {
+    margin-left: -100px;
+  }
 }
 .yoga_class .img {
   display: block;
+}
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 0px;
+  h2 {
+    margin-left: -2px;
+  }
+}
+.yoga_class {
+  display: flex;
+  h2 {
+    font-size: 24px;
+  }
+  img {
+    width: 100%;
+  }
 }
 .information_of_class {
   display: block;
@@ -218,25 +296,35 @@ section {
         margin-left: 10px;
       }
     }
-  }
-  .information {
-    margin-left: 10px;
-  }
-  .forma {
-    form {
-      margin-left: 10px;
-      margin-top: -40px;
-    }
     .text {
-      margin-top: -10px;
-      margin-left: 10px;
-    }
-    p {
-      margin-top: -10px;
-      margin-left: 10px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      margin-left: 0px;
+      h2 {
+        margin-left: 2px;
+      }
     }
   }
 }
+.information {
+  margin-left: 10px;
+}
+.forma {
+  form {
+    margin-left: 10px;
+    margin-top: -40px;
+  }
+  .text {
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  p {
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+}
+
 @media (max-width: 320px) {
   .Description_of_services {
     display: block;
@@ -247,6 +335,27 @@ section {
       li {
         width: 100%;
         margin-left: 10px;
+      }
+    }
+  }
+  .information_of_class {
+    display: block;
+  }
+  .yoga_class {
+    width: 100%;
+    display: block;
+    .img {
+      img {
+        width: 100%;
+      }
+    }
+    .text {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      margin-left: 0px;
+      h2 {
+        margin-left: 2px;
       }
     }
   }
