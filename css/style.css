@@ -426,6 +426,15 @@ section ul li img {
     margin-left: 50px;
     margin-bottom: 20px;
   }
+  .forma .text {
+    margin-left: 50px;
+  }
+  .information_of_class {
+    margin-left: 50px;
+  }
+  .yoga_class {
+    display: block;
+  }
 }
 
 @media (max-width: 425px) {
@@ -439,13 +448,11 @@ section ul li img {
 }
 
 .forma form {
-  margin-left: 10px;
   margin-top: -40px;
 }
 
 .forma .text {
   margin-top: -10px;
-  margin-left: 10px;
 }
 
 .forma p {
