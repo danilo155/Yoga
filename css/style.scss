@@ -309,8 +309,16 @@ section {
     }
   }
 }
-.information {
-  margin-left: 10px;
+@media (max-width: 425px) {
+  .yoga_class {
+    width: 100%;
+    display: block;
+    .img {
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 .forma {
   form {
@@ -351,14 +359,14 @@ section {
         width: 100%;
       }
     }
-    .text {
-      font-weight: 400;
-      font-size: 16px;
-      text-align: center;
-      margin-left: 0px;
-      h2 {
-        margin-left: 2px;
-      }
+  }
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 0px;
+    h2 {
+      margin-left: 2px;
     }
   }
 }

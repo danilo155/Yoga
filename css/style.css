@@ -401,8 +401,14 @@ section ul li img {
   }
 }
 
-.information {
-  margin-left: 10px;
+@media (max-width: 425px) {
+  .yoga_class {
+    width: 100%;
+    display: block;
+  }
+  .yoga_class .img img {
+    width: 100%;
+  }
 }
 
 .forma form {
@@ -445,13 +451,13 @@ section ul li img {
   .yoga_class .img img {
     width: 100%;
   }
-  .yoga_class .text {
+  .text {
     font-weight: 400;
     font-size: 16px;
     text-align: center;
     margin-left: 0px;
   }
-  .yoga_class .text h2 {
+  .text h2 {
     margin-left: 2px;
   }
 }
