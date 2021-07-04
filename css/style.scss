@@ -205,6 +205,21 @@ section {
   background: $liBefore;
   width: 100%;
 }
+.forma {
+  p {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 665px) {
+  .forma {
+    display: flex;
+  }
+}
+@media (max-width: 561px) {
+  .forma {
+    display: block;
+  }
+}
 @media (max-width: 964px) {
   label[for="toggle"] {
     display: block;
@@ -233,12 +248,6 @@ section {
 }
 .Description_of_services {
   flex-wrap: wrap;
-}
-@media (max-width: 759px) {
-  .forma {
-    display: block;
-    justify-content: center;
-  }
 }
 
 .yoga_class {

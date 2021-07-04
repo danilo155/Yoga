@@ -271,6 +271,24 @@ section ul li img {
   width: 100%;
 }
 
+.forma p {
+  padding-top: 20px;
+}
+
+@media (max-width: 665px) {
+  .forma {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 561px) {
+  .forma {
+    display: block;
+  }
+}
+
 @media (max-width: 964px) {
   label[for="toggle"] {
     display: block;
@@ -304,15 +322,6 @@ section ul li img {
 .Description_of_services {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media (max-width: 759px) {
-  .forma {
-    display: block;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .yoga_class {
