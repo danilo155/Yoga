@@ -218,7 +218,6 @@ section {
   }
   form {
     margin: 0 auto;
-    margin-left: 0;
   }
 }
 @media (max-width: 964px) {
@@ -285,7 +284,6 @@ section {
 }
 .forma {
   form {
-    margin-left: 200px;
     margin-top: -110px;
   }
   h2 {
@@ -294,6 +292,37 @@ section {
   .text {
     margin-top: 10px;
     margin-left: 200px;
+  }
+}
+.img-members {
+  .team {
+    display: flex;
+    position: relative;
+  }
+  .img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .img::before {
+    content: "";
+    z-index: 9;
+    position: absolute;
+    display: none;
+    background: rgba($color: #7a80e3, $alpha: 0.3s);
+    transition: 0.5s;
+  }
+  .img:hover::before {
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    margin-top: 7px;
   }
 }
 @media (max-width: 714px) {
@@ -370,6 +399,23 @@ section {
 }
 
 @media (max-width: 320px) {
+  .img-members {
+    display: block;
+    .img {
+      width: 320px;
+    }
+  }
+  .forma {
+    form {
+      margin-left: 12px;
+    }
+    .text {
+      margin-left: -10px;
+    }
+  }
+  .information_of_class {
+    margin-left: 0;
+  }
   .Description_of_services {
     display: block;
     background: $liBefore;
