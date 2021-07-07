@@ -182,7 +182,7 @@ section {
   max-width: 100%;
   .information_of_class {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
   h2 {
@@ -251,6 +251,9 @@ section {
 }
 
 .yoga_class {
+  width: 50%;
+  margin-left: 1px;
+  margin-right: 1px;
   .text {
     width: 301px;
   }
@@ -297,10 +300,10 @@ section {
 .img-members {
   .team {
     display: flex;
-    position: relative;
   }
   .img {
     width: 100%;
+    position: relative;
     img {
       width: 100%;
       height: 100%;
@@ -309,15 +312,18 @@ section {
   .img::before {
     content: "";
     z-index: 9;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
     position: absolute;
-    display: none;
-    background: rgba($color: #7a80e3, $alpha: 0.3s);
+    display: block;
+    background: rgba($color: #7a80e3, $alpha: 0.5);
     transition: 0.5s;
   }
   .img:hover::before {
     display: block;
     transition: 0.5s;
-    width: 100%;
+    opacity: 1;
   }
 }
 @media (max-width: 768px) {

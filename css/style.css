@@ -238,9 +238,9 @@ section ul li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -321,6 +321,9 @@ section ul li img {
 }
 
 .yoga_class {
+  width: 50%;
+  margin-left: 1px;
+  margin-right: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,11 +386,11 @@ section ul li img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
 }
 
 .img-members .img {
   width: 100%;
+  position: relative;
 }
 
 .img-members .img img {
@@ -398,9 +401,12 @@ section ul li img {
 .img-members .img::before {
   content: "";
   z-index: 9;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
   position: absolute;
-  display: none;
-  background: rgba(122, 128, 227, 0.3);
+  display: block;
+  background: rgba(122, 128, 227, 0.5);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -409,7 +415,7 @@ section ul li img {
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  width: 100%;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
