@@ -226,7 +226,7 @@ section {
   }
   nav {
     position: absolute;
-    top: 100px;
+    top: 10px;
     text-align: center;
   }
   input[type="checkbox"]:checked ~ nav {
@@ -325,6 +325,13 @@ section {
     transition: 0.5s;
     opacity: 1;
   }
+  .img::after {
+    content: "";
+    position: absolute;
+    background-image: url(/img/ico-02.png);
+    background-color: #fff;
+    display: block;
+  }
 }
 @media (max-width: 768px) {
   nav {
@@ -405,8 +412,13 @@ section {
 }
 
 @media (max-width: 320px) {
+  nav {
+    top: 50px;
+  }
   .img-members {
-    display: block;
+    .team {
+      display: block;
+    }
     .img {
       width: 320px;
     }

@@ -418,6 +418,14 @@ section ul li img {
   opacity: 1;
 }
 
+.img-members .img::after {
+  content: "";
+  position: absolute;
+  background-image: url(/img/ico-02.png);
+  background-color: #fff;
+  display: block;
+}
+
 @media (max-width: 768px) {
   nav {
     margin-top: 7px;
