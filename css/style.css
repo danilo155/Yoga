@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .wrapper {
   width: 100%;
   -webkit-box-pack: justify;
@@ -15,6 +19,11 @@
 @font-face {
   font-family: "DejaVu Sans";
   src: url(/fonts/DejaVuSans.ttf);
+}
+
+section {
+  width: 100%;
+  padding: 100px 0;
 }
 
 nav {
@@ -45,8 +54,34 @@ nav {
 }
 
 .menu ul li a {
+  position: relative;
   text-decoration: none;
-  color: #000;
+  color: #555;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.menu ul li a:hover {
+  color: #5363db;
+}
+
+.menu ul li a:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -5px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #5363db;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu ul li a:hover:after {
+  width: 50%;
 }
 
 .container {
@@ -63,5 +98,76 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.form-cta::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(83, 99, 219, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.form-cta {
+  background-image: url(/img/bg-01.jpg);
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-cta .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.form-cta .container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.form-cta .container form h2 {
+  color: #5363db;
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-cta .container .form-group input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 0 10px;
+  border: none;
+}
+
+.form-cta .container .form-group select {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  background: #f2f2f2;
+  padding: 0 10px;
+  border: none;
+}
+
+.form-cta .container .form-group {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
