@@ -9,6 +9,10 @@ $liBefore: #5363db;
 body {
   font-family: "Open Sans", sans-serif;
 }
+@font-face {
+  font-family: "FREESCPT" serif;
+  src: url(/fonts/FREESCPT.ttf);
+}
 .wrapper {
   width: 100%;
   justify-content: space-between;
@@ -24,11 +28,27 @@ section {
 nav {
   display: flex;
 }
+@media (max-width: 599px) {
+  label {
+    opacity: 1;
+  }
+  label {
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #616161;
+      position: relative;
+    }
+  }
+}
+
 .menu {
   justify-content: center;
   input[type="checkbox"] {
     display: none;
   }
+
   ul {
     display: flex;
     li {
@@ -96,9 +116,11 @@ nav {
       display: flex;
       flex-direction: column;
       background: #fff;
-      padding: 15px 15px;
+      padding: 27px 30px 35px;
       border-radius: 10px;
       h2 {
+        font-size: 26px;
+        font-weight: 400;
         color: #5363db;
         font-family: "Open Sans", sans-serif;
       }
@@ -107,7 +129,7 @@ nav {
       width: 100%;
       height: 50px;
       margin-bottom: 16px;
-      border-radius: 5px;
+      border-radius: 10px;
       background: #f2f2f2;
       padding: 0 10px;
       border: none;
@@ -123,6 +145,72 @@ nav {
     }
     .form-group {
       width: 100%;
+    }
+  }
+}
+.form {
+  display: flex;
+  justify-content: flex-end;
+}
+.col {
+  width: 50%;
+  padding: 0 46px;
+}
+.submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 19px;
+  .btn {
+    background: #5363db;
+    border: none;
+    border-radius: 10px;
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+  }
+}
+h1 {
+  font-size: 48px;
+  line-height: 72px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.subtitle {
+  font-family: "FREESCPT", serif;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 40px;
+  font-style: italic;
+  color: #fff;
+}
+@media (max-width: 599px) {
+  nav {
+    display: none;
+  }
+  label {
+    opacity: 1;
+  }
+  .form-cta {
+    .container {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 36px;
+      line-height: 50px;
+    }
+    .form {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .col {
+      padding: 0;
+      width: 100%;
+      text-align: center;
     }
   }
 }
