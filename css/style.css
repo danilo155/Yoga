@@ -37,41 +37,77 @@ nav {
   display: flex;
 }
 
+input[type="checkbox"],
+label {
+  display: none;
+}
+
 @media (max-width: 599px) {
   label {
-    opacity: 1;
+    display: block;
   }
   label span {
     display: block;
-    width: 100%;
+    width: 25px;
     height: 2px;
-    background-color: #616161;
+    background-color: #333;
     position: relative;
   }
+  label span::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    top: -10px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  label span::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+header .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.menu input[type="checkbox"] {
-  display: none;
-}
-
-.menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.menu ul li {
+.menu li {
   list-style: none;
   margin-left: 10px;
 }
 
-.menu ul li a {
+.menu li a {
   position: relative;
   text-decoration: none;
   color: #555;
@@ -79,11 +115,11 @@ nav {
   transition: color 0.5s;
 }
 
-.menu ul li a:hover {
+.menu li a:hover {
   color: #5363db;
 }
 
-.menu ul li a:after {
+.menu li a:after {
   position: absolute;
   display: block;
   content: "";
@@ -98,24 +134,8 @@ nav {
   transition: 0.5s;
 }
 
-.menu ul li a:hover:after {
+.menu li a:hover:after {
   width: 50%;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .form-cta::before {
@@ -141,10 +161,19 @@ nav {
 .form-cta .container {
   position: relative;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-cta .container form {
@@ -249,6 +278,28 @@ h1 {
   nav {
     display: none;
   }
+  nav ul {
+    display: block;
+  }
+  .burger-nav.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding-left: 0;
+    text-align: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .menu li {
+    margin-left: -10;
+  }
   label {
     opacity: 1;
   }
@@ -273,5 +324,143 @@ h1 {
     width: 100%;
     text-align: center;
   }
+}
+
+.program .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.program .row .subtitle p {
+  color: #555;
+}
+
+.program .row .container {
+  display: block;
+}
+
+.program .row .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.program .row .classes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.program .row .classes .classes-info a::after {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  content: "";
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  background-color: #555;
+}
+
+.row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row .classes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.title_row {
+  text-align: center;
+  display: block;
+}
+
+.title_row h2 {
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #5363db;
+}
+
+.classes-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 10px #cecece;
+          box-shadow: 7px 7px 10px #cecece;
+}
+
+.classes-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 30px;
+  width: 50%;
+}
+
+.classes-info a {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+.classes-info a:last-child {
+  color: #999;
+}
+
+.classes-img .img1 {
+  background-image: url(img/img-01.jpg);
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  border-radius: 10px 0 0 10px;
+  background-size: cover;
+  padding-bottom: 47%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
