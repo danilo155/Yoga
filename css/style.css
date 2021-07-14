@@ -454,7 +454,7 @@ h1 {
 }
 
 .classes-img .img1 {
-  background-image: url(img/img-01.jpg);
+  background-image: url(/img/img-01.jpg);
   width: 50%;
   background-repeat: no-repeat;
   background-position: left center;
