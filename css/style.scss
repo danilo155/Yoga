@@ -726,6 +726,9 @@ h2 {
   .shop-box .shop-item {
     width: 100%;
   }
+  .contacts {
+    flex-direction: column;
+  }
 }
 @media (max-width: 774px) {
   .shop-item {
